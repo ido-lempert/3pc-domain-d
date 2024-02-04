@@ -6,6 +6,24 @@
 </head>
 <body>
 
+<button type="button" id="btn">load bcodes</button>
+<script>
+    let el;
+    btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+
+        if (! el) {
+            el = document.createElement('iframe');
+
+            el.style = 'width: 300px; height: 300px; margin: 0 auto;';
+
+            document.body.appendChild(el);
+        }
+
+        el.src = `https://bcodes.poalim.site/#${Math.floor(Math.random()*100000)}`;
+    })
+
+</script>
 <iframe src="https://bcodes.poalim.site/" style="width: 300px; height: 300px; margin: 0 auto;"></iframe>
 </body>
 </html>
